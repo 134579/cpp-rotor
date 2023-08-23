@@ -202,7 +202,7 @@ if (BUILD_WX)
 endif()
 
 if (BUILD_EV)
-    find_package(Libev REQUIRED)
+    find_package(unofficial-libev CONFIG REQUIRED)
     add_library(rotor_ev
         src/rotor/ev/supervisor_ev.cpp
         src/rotor/ev/system_context_ev.cpp
@@ -212,7 +212,7 @@ if (BUILD_EV)
         EXPORT_FILE_NAME include/rotor/ev/export.h
     )
     target_include_directories(rotor_ev PUBLIC ${LIBEV_INCLUDE_DIRS})
-    target_link_libraries(rotor_ev PUBLIC rotor ${LIBEV_LIBRARY})
+    target_link_libraries(rotor_ev PUBLIC rotor unofficial::libev::libev)
     add_library(rotor::ev ALIAS rotor_ev)
     list(APPEND ROTOR_TARGETS_TO_INSTALL rotor_ev)
     list(APPEND ROTOR_HEADERS_TO_INSTALL

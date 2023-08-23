@@ -11,7 +11,7 @@
 #include "rotor/ev/supervisor_config_ev.h"
 #include "rotor/ev/system_context_ev.h"
 #include "rotor/system_context.h"
-#include <ev.h>
+#include <libev/ev.h>
 #include <memory>
 #include <unordered_map>
 

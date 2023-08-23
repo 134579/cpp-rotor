@@ -8,7 +8,7 @@
 #include "rotor.hpp"
 #include "rotor/ev.hpp"
 #include "access.h"
-#include <ev.h>
+#include <libev/ev.h>
 
 namespace r = rotor;
 namespace re = rotor::ev;
